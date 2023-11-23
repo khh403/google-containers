@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GHCRIOTOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull k8s.gcr.io/ingress-nginx/controller:v0.35.0  
-          docker tag  k8s.gcr.io/ingress-nginx/controller:v0.35.0  ghcr.io/khh403/ingress-nginx/controller:v0.35.0       
-          docker push ghcr.io/khh403/ingress-nginx/controller:v0.35.0
+          docker pull k8s.gcr.io/kube-cross:v1.16.1-1
+          docker tag  k8s.gcr.io/kube-cross:v1.16.1-1  ghcr.io/khh403/kube-cross:v1.16.1-1
+          docker push ghcr.io/khh403/kube-cross:v1.16.1-1
