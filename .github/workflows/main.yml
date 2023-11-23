@@ -1,4 +1,4 @@
-name: GitGoogleContainer
+name: GoogleContainers
 on:
   push:
 jobs:
