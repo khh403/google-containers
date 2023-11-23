@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GHCRIOTOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull k8s.gcr.io/kube-cross:v1.16.1-1
-          docker tag  k8s.gcr.io/kube-cross:v1.16.1-1  ghcr.io/khh403/kube-cross:v1.16.1-1
-          docker push ghcr.io/khh403/kube-cross:v1.16.1-1
+          docker pull k8s.gcr.io/kube-cross:latest
+          docker tag  k8s.gcr.io/kube-cross:latest  ghcr.io/khh403/kube-cross:latest
+          docker push ghcr.io/khh403/kube-cross:latest
