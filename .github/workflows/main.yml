@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Login in Docker Registry
-        uses: docker/login-action@v1
+        uses: khh403/hellokitty@v1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
