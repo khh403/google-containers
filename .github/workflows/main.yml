@@ -1,4 +1,4 @@
-name: GoogleContainers
+name: registry.k8s.io.images
 on:
   push:
 jobs:
