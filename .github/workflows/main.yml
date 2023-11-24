@@ -13,16 +13,6 @@ jobs:
           password: ${{ secrets.GHCRIOTOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull k8s.gcr.io/kube-cross:v1.28.0-go1.20.11-bullseye.0
-          docker tag  k8s.gcr.io/kube-cross:v1.28.0-go1.20.11-bullseye.0 ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
+          docker pull registry.k8s.io/kube-cross:v1.28.0-go1.20.11-bullseye.0
+          docker tag  registry.k8s.io/kube-cross:v1.28.0-go1.20.11-bullseye.0 ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
           docker push ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
-          
-          docker pull k8s.gcr.io/pause:latest
-          docker tag  k8s.gcr.io/pause:latest  ghcr.io/khh403/pause:latest
-          docker push ghcr.io/khh403/pause:latest
-          
-          docker pull k8s.gcr.io/busybox:latest
-          docker tag  k8s.gcr.io/busybox:latest  ghcr.io/khh403/busybox:latest
-          docker push ghcr.io/khh403/busybox:latest
-
-          
