@@ -20,3 +20,43 @@ jobs:
           docker pull k8s.gcr.io/pause:3.4.1
           docker tag  k8s.gcr.io/pause:3.4.1  ghcr.io/khh403/pause:3.4.1
           docker push ghcr.io/khh403/pause:3.4.1
+
+          docker pull k8s.gcr.io/nginx:1.7.9
+          docker tag  k8s.gcr.io/nginx:1.7.9  ghcr.io/khh403/nginx:1.7.9
+          docker push ghcr.io/khh403/nginx:1.7.9
+
+          docker pull k8s.gcr.io/nginx:test-cmd
+          docker tag  k8s.gcr.io/nginx:test-cmd  ghcr.io/khh403/nginx:test-cmd
+          docker push ghcr.io/khh403/nginx:test-cmd
+
+          docker pull k8s.gcr.io/perl
+          docker tag  k8s.gcr.io/perl  ghcr.io/khh403/perl
+          docker push ghcr.io/khh403/perl
+
+          docker pull k8s.gcr.io/pause:2.0
+          docker tag  k8s.gcr.io/pause:2.0  ghcr.io/khh403/pause:2.0
+          docker push ghcr.io/khh403/pause:2.0
+
+          docker pull k8s.gcr.io/pause:latest
+          docker tag  k8s.gcr.io/pause:latest  ghcr.io/khh403/pause:latest
+          docker push ghcr.io/khh403/pause:latest
+
+          docker pull k8s.gcr.io/nginx:test-cmd
+          docker tag  k8s.gcr.io/nginx:test-cmd  ghcr.io/khh403/nginx:test-cmd
+          docker push ghcr.io/khh403/nginx:test-cmd
+
+          docker pull k8s.gcr.io/nginx-slim:0.7
+          docker tag  k8s.gcr.io/nginx-slim:0.7  ghcr.io/khh403/nginx-slim:0.7
+          docker push ghcr.io/khh403/nginx-slim:0.7
+
+          docker pull k8s.gcr.io/nginx-slim:0.8
+          docker tag  k8s.gcr.io/nginx-slim:0.8  ghcr.io/khh403/nginx-slim:0.8
+          docker push ghcr.io/khh403/nginx-slim:0.8
+
+          docker pull k8s.gcr.io/busybox:1.27
+          docker tag  k8s.gcr.io/busybox:1.27  ghcr.io/khh403/busybox:1.27
+          docker push ghcr.io/khh403/busybox:1.27
+
+          docker pull k8s.gcr.io/pause:3.4
+          docker tag  k8s.gcr.io/pause:3.4  ghcr.io/khh403/pause:3.4
+          docker push ghcr.io/khh403/pause:3.4
