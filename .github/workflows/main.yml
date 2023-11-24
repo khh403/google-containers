@@ -29,10 +29,6 @@ jobs:
           docker tag  k8s.gcr.io/nginx:test-cmd  ghcr.io/khh403/nginx:test-cmd
           docker push ghcr.io/khh403/nginx:test-cmd
 
-          docker pull k8s.gcr.io/perl
-          docker tag  k8s.gcr.io/perl  ghcr.io/khh403/perl
-          docker push ghcr.io/khh403/perl
-
           docker pull k8s.gcr.io/pause:2.0
           docker tag  k8s.gcr.io/pause:2.0  ghcr.io/khh403/pause:2.0
           docker push ghcr.io/khh403/pause:2.0
