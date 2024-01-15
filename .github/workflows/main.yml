@@ -28,3 +28,7 @@ jobs:
           docker pull registry.k8s.io/build-image/distroless-iptables:v0.2.7
           docker tag registry.k8s.io/build-image/distroless-iptables:v0.2.7 ghcr.io/khh403/distroless-iptables:v0.2.7
           docker push ghcr.io/khh403/distroless-iptables:v0.2.7
+
+          docker pull gcr.io/kaniko-project/executor:v1.9.0-debug
+          docker tag  gcr.io/kaniko-project/executor:v1.9.0-debug ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
+          docker push ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
