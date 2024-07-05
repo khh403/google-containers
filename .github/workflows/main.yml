@@ -20,6 +20,10 @@ jobs:
           docker pull docker.io/library/golang:1.20
           docker tag  docker.io/library/golang:1.20 ghcr.io/khh403/golang:1.20
           docker push ghcr.io/khh403/golang:1.20
+
+          docker pull docker.io/library/golang:1.22
+          docker tag  docker.io/library/golang:1.22 ghcr.io/khh403/golang:1.22
+          docker push ghcr.io/khh403/golang:1.22
           
           docker pull registry.k8s.io/build-image/kube-cross:v1.28.0-go1.20.11-bullseye.0
           docker tag  registry.k8s.io/build-image/kube-cross:v1.28.0-go1.20.11-bullseye.0 ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
