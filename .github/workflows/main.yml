@@ -13,7 +13,38 @@ jobs:
           password: ${{ secrets.GHCRIOTOKEN }}
       - name: Docker pull and push
         run: |
+          docker pull gcr.io/kaniko-project/executor:debug
+          docker tag  gcr.io/kaniko-project/executor:debug ghcr.io/khh403/kaniko-project/executor:debug
+          docker push ghcr.io/khh403/kaniko-project/executor:debug
 
-          docker pull docker.io/hpcaitech/pytorch-cuda:2.1.0-12.1.0
-          docker tag  docker.io/hpcaitech/pytorch-cuda:2.1.0-12.1.0 ghcr.io/khh403/hpcaitech/pytorch-cuda:2.1.0-12.1.0
-          docker push ghcr.io/khh403/hpcaitech/pytorch-cuda:2.1.0-12.1.0
+          docker pull docker.io/library/golang:1.20
+          docker tag  docker.io/library/golang:1.20 ghcr.io/khh403/golang:1.20
+          docker push ghcr.io/khh403/golang:1.20
+
+          docker pull docker.io/library/golang:1.22
+          docker tag  docker.io/library/golang:1.22 ghcr.io/khh403/golang:1.22
+          docker push ghcr.io/khh403/golang:1.22
+          
+          docker pull registry.k8s.io/build-image/kube-cross:v1.28.0-go1.20.11-bullseye.0
+          docker tag  registry.k8s.io/build-image/kube-cross:v1.28.0-go1.20.11-bullseye.0 ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
+          docker push ghcr.io/khh403/kube-cross:v1.28.0-go1.20.11-bullseye.0
+
+          docker pull registry.k8s.io/build-image/go-runner:v2.3.1-go1.20.11-bullseye.0
+          docker tag  registry.k8s.io/build-image/go-runner:v2.3.1-go1.20.11-bullseye.0 ghcr.io/khh403/go-runner:v2.3.1-go1.20.11-bullseye.0
+          docker push ghcr.io/khh403/go-runner:v2.3.1-go1.20.11-bullseye.0
+
+          docker pull registry.k8s.io/build-image/setcap:bookworm-v1.0.0
+          docker tag registry.k8s.io/build-image/setcap:bookworm-v1.0.0 ghcr.io/khh403/setcap:bookworm-v1.0.0
+          docker push ghcr.io/khh403/setcap:bookworm-v1.0.0
+
+          docker pull registry.k8s.io/build-image/distroless-iptables:v0.2.7
+          docker tag registry.k8s.io/build-image/distroless-iptables:v0.2.7 ghcr.io/khh403/distroless-iptables:v0.2.7
+          docker push ghcr.io/khh403/distroless-iptables:v0.2.7
+
+          docker pull veinmind/go1.20:1.9.42
+          docker tag veinmind/go1.20:1.9.42 ghcr.io/khh403/go1.20:1.9.42
+          docker push ghcr.io/khh403/go1.20:1.9.42
+
+          docker pull gcr.io/kaniko-project/executor:v1.9.0-debug
+          docker tag  gcr.io/kaniko-project/executor:v1.9.0-debug ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
+          docker push ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
