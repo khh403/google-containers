@@ -48,3 +48,7 @@ jobs:
           docker pull gcr.io/kaniko-project/executor:v1.9.0-debug
           docker tag  gcr.io/kaniko-project/executor:v1.9.0-debug ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
           docker push ghcr.io/khh403/kaniko-project/executor:v1.9.0-debug
+
+          docker pull docker.io/library/python:3.11-bullseye
+          docker tag docker.io/library/python:3.11-bullseye ghcr.io/khh403/python:3.11-bullseye
+          docker push ghcr.io/khh403/python:3.11-bullseye
