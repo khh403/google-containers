@@ -17,5 +17,5 @@ jobs:
       - name: Docker pull and push
         run: |
           docker pull gcr.io/distroless/static:nonroot
-          docker tag  gcr.io/distroless/static:nonroot ghcr.io/khh403/static:nonroot
-          docker push ghcr.io/khh403/static:nonroot
+          docker tag  gcr.io/distroless/static:nonroot ghcr.io/khh403/distroless-static:nonroot
+          docker push ghcr.io/khh403/distroless-static:nonroot
