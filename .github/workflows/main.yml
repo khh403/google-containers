@@ -23,3 +23,7 @@ jobs:
           docker pull golang:1.19
           docker tag  golang:1.19 ghcr.io/khh403/golang:1.19
           docker push ghcr.io/khh403/golang:1.19
+
+          docker pull gcr.io/kaniko-project/executor:latest
+          docker tag gcr.io/kaniko-project/executor:latest ghcr.io/khh403/kaniko-project/executor:latest
+          docker push ghcr.io/khh403/kaniko-project/executor:latest
